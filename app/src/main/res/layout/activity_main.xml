@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
+    android:background="@color/white"
     tools:context=".MainActivity">
 
     <ImageView
@@ -14,7 +14,7 @@
         android:layout_marginTop="14dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.131"
+        app:layout_constraintHorizontal_bias="0.206"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.042"
@@ -22,32 +22,34 @@
 
     <TextView
         android:id="@+id/mTxtMain"
-        android:layout_width="352dp"
-        android:layout_height="129dp"
+        android:layout_width="331dp"
+        android:layout_height="125dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="436dp"
         android:fontFamily="@font/aladin"
         android:text="HELLO THERE ,  WELCOME"
-        android:textSize="40sp"
+        android:textSize="34sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/mImg"
-        app:layout_constraintVertical_bias="0.525" />
+        app:layout_constraintVertical_bias="0.125" />
 
     <TextView
         android:id="@+id/mMain"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="39dp"
-        android:layout_marginTop="22dp"
-        android:layout_marginEnd="225dp"
+        android:layout_width="214dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="150dp"
+        android:layout_marginBottom="21dp"
         android:fontFamily="casual"
         android:text="SIGN IN TO CONTINUE"
         android:textSize="15sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/mPlain"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -93,7 +95,7 @@
         android:layout_height="48dp"
         android:layout_marginStart="61dp"
         android:layout_marginTop="27dp"
-        android:layout_marginEnd="140dp"
+        android:layout_marginEnd="150dp"
         android:layout_marginBottom="159dp"
         android:ems="10"
         android:hint="Enter Password"
@@ -116,8 +118,10 @@
         android:textColor="#DDDCBB"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mPass" />
+        app:layout_constraintTop_toBottomOf="@+id/mPass"
+        app:layout_constraintVertical_bias="1.0" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
