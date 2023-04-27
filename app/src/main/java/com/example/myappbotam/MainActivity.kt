@@ -53,7 +53,7 @@ class MainActivity : AppCompatActivity() {
             startActivity(tembea)
         }
         btnlogin.setOnClickListener {
-            var tembea = Intent(this,UserActivity::class.java)
+            var tembea = Intent(this,LoginActivity::class.java)
             startActivity(tembea)
         }
 

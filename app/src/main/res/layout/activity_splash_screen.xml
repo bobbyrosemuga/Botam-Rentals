@@ -4,59 +4,33 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="match_parent"
-    android:background="#DDBA13"
+
     tools:context=".Splash_Screen">
 
     <ImageView
         android:id="@+id/mImageSplash"
-        android:layout_width="269dp"
-        android:layout_height="328dp"
-        android:layout_marginStart="70dp"
-        android:layout_marginTop="100dp"
-        android:layout_marginEnd="70dp"
-        android:layout_marginBottom="250dp"
+        android:layout_width="410dp"
+        android:layout_height="726dp"
+        android:pointerIcon="context_menu"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/bulls_car_logo" />
+        app:layout_constraintVertical_bias="0.4"
+        app:srcCompat="@drawable/wheels" />
 
     <TextView
-        android:id="@+id/mTextSplash"
-        android:layout_width="275dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="195dp"
-        android:fontFamily="@font/antic"
-        android:text="WELCOME  TO  BOTAM  CAR  RENTALS"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.395"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mImageSplash"
-        app:layout_constraintVertical_bias="0.23" />
+        android:id="@+id/mtext"
+        android:layout_width="113dp"
+        android:layout_height="236dp"
+        android:fontFamily="@font/aclonica"
+        android:text="Thrill    Of   The   Next"
+        android:textColor="@color/white"
+        android:textSize="34sp"
+        tools:layout_editor_absoluteX="236dp"
+        tools:layout_editor_absoluteY="33dp" />
 
-    <TextView
-        android:id="@+id/mSplash"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="71dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="78dp"
-        android:layout_marginBottom="110dp"
-        android:fontFamily="casual"
-        android:text="Nation Wide Car Rental App"
-        android:textSize="20sp"
-        android:textStyle="bold|italic"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mTextSplash" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
