@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "965434977858",
+    "project_id": "botam-rentals-42518",
+    "storage_bucket": "botam-rentals-42518.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:965434977858:android:0bbad4e1f4ead7c712c7db",
+        "android_client_info": {
+          "package_name": "com.example.myappbotam"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "965434977858-4vsrt571ncss44rf40c2nah00tgopcqb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAEXLbz9HJQsXGjyxVJ45FZw5vARSrBDQM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "965434977858-4vsrt571ncss44rf40c2nah00tgopcqb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

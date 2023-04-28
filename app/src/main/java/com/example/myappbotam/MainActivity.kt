@@ -55,14 +55,14 @@ class MainActivity : AppCompatActivity() {
             }else{
                 //Proceed to save
                 //Prepare the user to be saved
-                var user = User(name, email, password, id)
+                var user = User(name, email, password)
                 // Create a reference in the firebase database
                 var ref = FirebaseDatabase.getInstance().
-                getReference().child("Users/"+id)
+                getReference().child("Users/")
                 // Show the program to start saving
                 progressDialog.show()
                 ref.setValue(user).addOnCompleteListener{
-                    // Dismiss the progress and check if the task is successfull
+                    // Dismiss the progress and check if the task is successfully
                         task->
                     progressDialog.dismiss()
                     if (task.isSuccessful){
