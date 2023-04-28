@@ -4,14 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#EDDFAD"
+    android:background="@color/black"
     tools:context=".MainActivity">
 
     <ImageView
         android:id="@+id/mImg"
         android:layout_width="0dp"
         android:layout_height="0dp"
-
         android:layout_marginStart="35dp"
         android:layout_marginTop="14dp"
         android:layout_marginEnd="53dp"
@@ -20,7 +19,7 @@
         app:layout_constraintEnd_toEndOf="@+id/mTxtMain"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/bulls_car_logo" />
+        app:srcCompat="@drawable/waal" />
 
     <TextView
         android:id="@+id/mTxtMain"
@@ -31,7 +30,7 @@
         android:layout_marginBottom="28dp"
         android:fontFamily="@font/aladin"
         android:text="HELLO THERE ,  WELCOME"
-        android:textColor="@color/black"
+        android:textColor="#8076D8"
         android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/mMain"
         app:layout_constraintEnd_toEndOf="@+id/mMain"
@@ -47,7 +46,7 @@
         android:layout_marginBottom="11dp"
         android:fontFamily="casual"
         android:text="SIGN IN TO CONTINUE"
-        android:textColor="@color/black"
+        android:textColor="#1CABF3"
         android:textSize="15sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/mPlain"
@@ -55,7 +54,7 @@
         app:layout_constraintTop_toBottomOf="@+id/mTxtMain" />
 
     <EditText
-        android:textColorHint="#09221F"
+        android:textColorHint="#EADD7E"
         android:id="@+id/mPlain"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -63,14 +62,14 @@
         android:ems="10"
         android:hint="Enter Full Name"
         android:inputType="text"
-        android:textColor="#030520"
+        android:textColor="#9EA2D6"
         app:layout_constraintBottom_toTopOf="@+id/mEmail"
         app:layout_constraintEnd_toEndOf="@+id/mEmail"
         app:layout_constraintStart_toStartOf="@+id/mEmail"
         app:layout_constraintTop_toBottomOf="@+id/mMain" />
 
     <EditText
-        android:textColorHint="#09221F"
+        android:textColorHint="#EADD7E"
         android:id="@+id/mEmail"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -78,14 +77,14 @@
         android:ems="10"
         android:hint="Enter Email"
         android:inputType="textEmailAddress"
-        android:textColor="#030520"
+        android:textColor="#9EA2D6"
         app:layout_constraintBottom_toTopOf="@+id/mPass"
         app:layout_constraintEnd_toEndOf="@+id/mPass"
         app:layout_constraintStart_toStartOf="@+id/mPass"
         app:layout_constraintTop_toBottomOf="@+id/mPlain" />
 
     <EditText
-        android:textColorHint="#09221F"
+        android:textColorHint="#EADD7E"
         android:id="@+id/mPass"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
@@ -94,7 +93,7 @@
         android:ems="10"
         android:hint="Enter Password"
         android:inputType="textPassword"
-        android:textColor="#030520"
+        android:textColor="#9EA2D6"
         app:layout_constraintBottom_toTopOf="@+id/mBtnSign"
         app:layout_constraintStart_toStartOf="@+id/mBtnSign"
         app:layout_constraintTop_toBottomOf="@+id/mEmail" />
@@ -121,7 +120,7 @@
         android:layout_marginStart="56dp"
         android:layout_marginEnd="56dp"
         android:layout_marginBottom="27dp"
-        android:backgroundTint="#700735"
+        android:backgroundTint="#07700C"
         android:text="LOGIN"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -129,7 +128,7 @@
         app:layout_constraintTop_toBottomOf="@+id/mVIEW" />
 
     <TextView
-        android:textColor="@color/black"
+        android:textColor="#D6E8F1"
         android:id="@+id/mVIEW"
         android:layout_width="0dp"
         android:layout_height="0dp"

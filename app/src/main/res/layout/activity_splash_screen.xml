@@ -23,13 +23,33 @@
     <TextView
         android:id="@+id/mtext"
         android:layout_width="113dp"
-        android:layout_height="236dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="33dp"
+        android:layout_marginEnd="61dp"
+        android:layout_marginBottom="417dp"
         android:fontFamily="@font/aclonica"
         android:text="Thrill    Of   The   Next"
         android:textColor="@color/white"
         android:textSize="34sp"
-        tools:layout_editor_absoluteX="236dp"
-        tools:layout_editor_absoluteY="33dp" />
+        app:layout_constraintBottom_toTopOf="@+id/viewj"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/viewj"
+        android:layout_width="243dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginEnd="64dp"
+        android:layout_marginBottom="19dp"
+        android:fontFamily="@font/aladin"
+        android:text="WELCOME TO BOTAM RENTALS"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mtext" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

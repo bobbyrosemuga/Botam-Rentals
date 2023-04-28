@@ -23,6 +23,7 @@ class MainActivity : AppCompatActivity() {
         lateinit var mEmail: EditText
         lateinit var mPassword: EditText
         lateinit var btnlogin : Button
+        lateinit var progressDialog : ProgressDialog
         super.onCreate(savedInstanceState)
         window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN)
         setContentView(R.layout.activity_main)
@@ -34,6 +35,9 @@ class MainActivity : AppCompatActivity() {
         mEmail = findViewById(R.id.mEmail)
         mPassword = findViewById(R.id.mPass)
         btnlogin = findViewById(R.id.mBtnLogin)
+        progressDialog = ProgressDialog(this)
+        progressDialog.setTitle("Loading")
+        progressDialog.setMessage("Please wait...")
         btnSignIn.setOnClickListener {
             var name = mName.text.toString().trim()
             var email = mEmail.text.toString().trim()
@@ -48,10 +52,33 @@ class MainActivity : AppCompatActivity() {
             }else if (password.isEmpty()){
                 mPassword.setError("Please fill this field")
                 mPassword.requestFocus()
+            }else{
+                //Proceed to save
+                //Prepare the user to be saved
+                var user = User(name, email, password, id)
+                // Create a reference in the firebase database
+                var ref = FirebaseDatabase.getInstance().
+                getReference().child("Users/"+id)
+                // Show the program to start saving
+                progressDialog.show()
+                ref.setValue(user).addOnCompleteListener{
+                    // Dismiss the progress and check if the task is successfull
+                        task->
+                    progressDialog.dismiss()
+                    if (task.isSuccessful){
+                        Toast.makeText(this,"User saved successfully",
+                            Toast.LENGTH_LONG).show()
+                    }else{
+                        Toast.makeText(this,"User saving failed",
+                            Toast.LENGTH_LONG).show()
+                    }
+                }
+
             }
             var tembea = Intent(this,UserActivity::class.java)
             startActivity(tembea)
         }
+
         btnlogin.setOnClickListener {
             var tembea = Intent(this,LoginActivity::class.java)
             startActivity(tembea)
