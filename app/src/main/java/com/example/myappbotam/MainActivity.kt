@@ -1,7 +1,9 @@
 package com.example.myappbotam
 
 import android.app.ProgressDialog
+import android.content.Context
 import android.content.Intent
+import android.database.sqlite.SQLiteDatabase
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.ContactsContract.CommonDataKinds.Email
@@ -11,19 +13,24 @@ import android.widget.EditText
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.FirebaseDatabase
 
 class MainActivity : AppCompatActivity() {
+    lateinit var myimage: ImageView
+    lateinit var mText: TextView
+    lateinit var mTextMain: TextView
+    lateinit var btnSignIn: Button
+    lateinit var mName: EditText
+    lateinit var mEmail: EditText
+    lateinit var mPassword: EditText
+    lateinit var btnlogin : Button
+//    lateinit var db: SQLiteDatabase
+    lateinit var mAuth: FirebaseAuth
+    lateinit var progressDialog:ProgressDialog
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        lateinit var myimage: ImageView
-        lateinit var mText: TextView
-        lateinit var mTextMain: TextView
-        lateinit var btnSignIn: Button
-        lateinit var mName: EditText
-        lateinit var mEmail: EditText
-        lateinit var mPassword: EditText
-        lateinit var btnlogin : Button
-        lateinit var progressDialog : ProgressDialog
         super.onCreate(savedInstanceState)
         window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN)
         setContentView(R.layout.activity_main)
@@ -38,52 +45,57 @@ class MainActivity : AppCompatActivity() {
         progressDialog = ProgressDialog(this)
         progressDialog.setTitle("Loading")
         progressDialog.setMessage("Please wait...")
+        mAuth = FirebaseAuth.getInstance()
+        // Create a database called eMobilisDb
+//        db = openOrCreateDatabase("eMobilisDb", Context.MODE_PRIVATE,null)
+        // Create a table called users inside the database
+//        db.execSQL("CREATE TABLE IF NOT EXISTS users(jina VARCHAR, arafa VARCHAR, kitambulisho VARCHAR)")
+        //Set on click listeners to the buttons
         btnSignIn.setOnClickListener {
+            //Receive the data from the user
             var name = mName.text.toString().trim()
             var email = mEmail.text.toString().trim()
             var password = mPassword.text.toString().trim()
-            var id = System.currentTimeMillis().toString()
-            if (name.isEmpty()){
-                mName.setError("Please fill this field")
-                mName.requestFocus()
-            }else if (email.isEmpty()){
-                mEmail.setError("Please fill this field")
-                mEmail.requestFocus()
-            }else if (password.isEmpty()){
-                mPassword.setError("Please fill this field")
-                mPassword.requestFocus()
+            // Check if th user is submitting the empty fields
+            if (name.isEmpty() || email.isEmpty() || password.isEmpty()){
+                // Display an error message using the defined message function
+                message("EMPTY FIELDS!!!!", "Please fill all the inputs!!")
             }else{
-                //Proceed to save
-                //Prepare the user to be saved
-                var user = User(name, email, password)
-                // Create a reference in the firebase database
-                var ref = FirebaseDatabase.getInstance().
-                getReference().child("Users/")
-                // Show the program to start saving
+                //Proceed to register to firebase
+                /*db.execSQL("INSERT INTO users VALUES('" +name+ "','"+email+ "', '"+password+"')")
+                clear()
+                message("SUCCESS!!","User saved successfully")
+                var tembea = Intent(this,UserActivity::class.java)
+                startActivity(tembea)*/
                 progressDialog.show()
-                ref.setValue(user).addOnCompleteListener{
-                    // Dismiss the progress and check if the task is successfully
-                        task->
+                mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener {
                     progressDialog.dismiss()
-                    if (task.isSuccessful){
-                        Toast.makeText(this,"User saved successfully",
-                            Toast.LENGTH_LONG).show()
+                    if (it.isSuccessful){
+                        Toast.makeText(this@MainActivity,"Registration successful",Toast.LENGTH_LONG).show()
+                        var tembea = Intent(this,LoginActivity::class.java)
+                        startActivity(tembea)
+                        mAuth.signOut()
+                        finish()
                     }else{
-                        Toast.makeText(this,"User saving failed",
-                            Toast.LENGTH_LONG).show()
+                        message("ERROR!!",it.exception!!.message.toString())
                     }
                 }
 
             }
-            var tembea = Intent(this,UserActivity::class.java)
-            startActivity(tembea)
+
         }
 
-        btnlogin.setOnClickListener {
-            var tembea = Intent(this,LoginActivity::class.java)
-            startActivity(tembea)
-        }
-
-
+    }
+    fun message(title:String, message:String){
+        val alertDialog = AlertDialog.Builder(this)
+        alertDialog.setTitle(title)
+        alertDialog.setMessage(message)
+        alertDialog.setPositiveButton("Close",null)
+        alertDialog.create().show()
+    }
+    fun clear(){
+        mName.setText("")
+        mEmail.setText("")
+        mEmail.setText("")
     }
 }

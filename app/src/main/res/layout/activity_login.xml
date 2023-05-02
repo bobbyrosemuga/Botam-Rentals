@@ -9,36 +9,38 @@
 
     <ImageView
         android:id="@+id/car_logo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="34dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="197dp"
-        app:layout_constraintBottom_toTopOf="@+id/passy"
+        android:layout_width="175dp"
+        android:layout_height="0dp"
+
+        android:layout_marginStart="65dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="65dp"
+        android:layout_marginBottom="63dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="@+id/email"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/onaroad" />
+        app:srcCompat="@drawable/wallpaper2you_135663" />
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="260dp"
+        android:layout_width="315dp"
         android:layout_height="0dp"
-        android:layout_marginStart="34dp"
-        android:layout_marginBottom="403dp"
+        android:layout_marginStart="33dp"
+        android:layout_marginBottom="58dp"
         android:fontFamily="@font/aclonica"
         android:text="Kindly Enter  The Following Details"
         android:textColor="@color/white"
         android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/email"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/car_logo" />
 
     <EditText
         android:id="@+id/email"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="37dp"
-        android:layout_marginEnd="34dp"
+        android:layout_width="198dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="57dp"
         android:ems="10"
         android:fontFamily="@font/aladin"
         android:hint=" Enter  Email"
@@ -47,42 +49,40 @@
         android:textColorHint="#171B1E"
         android:textSize="15dp"
         android:textStyle="bold|italic"
-        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintBottom_toTopOf="@+id/edtPass"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
-
-    <EditText
-        android:id="@+id/passy"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="267dp"
-        android:ems="10"
-        android:fontFamily="@font/aladin"
-        android:hint="Enter Password"
-        android:inputType="textPassword"
-        android:textColor="#1E0202"
-        android:textColorHint="#171B1E"
-        android:textSize="15dp"
-        android:textStyle="bold|italic"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/email"
-        app:layout_constraintStart_toStartOf="@+id/email"
-        app:layout_constraintTop_toBottomOf="@+id/car_logo" />
 
     <Button
         android:id="@+id/threebtn"
         android:layout_width="241dp"
-        android:layout_height="45dp"
-        android:layout_marginStart="85dp"
-        android:layout_marginTop="56dp"
-        android:layout_marginEnd="85dp"
-        android:layout_marginBottom="166dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="57dp"
+
         android:backgroundTint="#192209"
         android:fontFamily="monospace"
         android:text="CONTINUE"
         android:textSize="20dp"
-        android:textStyle=""
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/passy" />
+        app:layout_constraintTop_toBottomOf="@+id/edtPass" />
+
+    <EditText
+        android:id="@+id/edtPass"
+        android:layout_width="189dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="53dp"
+        android:ems="10"
+        android:fontFamily="@font/aladin"
+        android:hint=" Enter  Password"
+        android:inputType="textPassword"
+        android:textColor="#1E0202"
+        android:textColorHint="#171B1E"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toTopOf="@+id/threebtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/email" />
 </androidx.constraintlayout.widget.ConstraintLayout>
