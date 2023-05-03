@@ -72,7 +72,7 @@ class MainActivity : AppCompatActivity() {
                     progressDialog.dismiss()
                     if (it.isSuccessful){
                         Toast.makeText(this@MainActivity,"Registration successful",Toast.LENGTH_LONG).show()
-                        var tembea = Intent(this,LoginActivity::class.java)
+                        var tembea = Intent(this,DashboardActivity::class.java)
                         startActivity(tembea)
                         mAuth.signOut()
                         finish()
@@ -83,6 +83,10 @@ class MainActivity : AppCompatActivity() {
 
             }
 
+        }
+        btnlogin.setOnClickListener {
+            var tembea = Intent(this,LoginActivity::class.java)
+            startActivity(tembea)
         }
 
     }
@@ -98,4 +102,5 @@ class MainActivity : AppCompatActivity() {
         mEmail.setText("")
         mEmail.setText("")
     }
+
 }
