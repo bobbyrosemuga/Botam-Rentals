@@ -6,7 +6,277 @@
     android:layout_height="match_parent"
     android:background="@color/black"
     tools:context=".DashboardActivity">
+ <LinearLayout
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+     android:orientation="vertical">
 
+     <TextView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="  My  Dashboard "
+         android:textSize="24sp"
+         android:textColor="@color/white"
+         android:textStyle="italic"
+         android:layout_margin="20dp"
+         />
+
+
+     <GridLayout
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:rowCount="4"
+         android:columnCount="2"
+         android:layout_margin="5dp"
+         android:alignmentMode="alignMargins"
+         android:layout_gravity="center_horizontal"
+         android:columnOrderPreserved="false">
+
+
+
+
+         <androidx.cardview.widget.CardView
+             android:layout_width="170dp"
+             android:layout_height="170dp"
+             app:cardCornerRadius="12dp"
+             app:cardElevation="5dp"
+             app:cardBackgroundColor="@color/gray"
+             android:layout_margin="10dp">
+
+
+             <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+                 android:orientation="vertical"
+                 android:gravity="center"
+                 >
+
+                 <ImageView
+                     android:layout_width="24dp"
+                     android:layout_height="24dp"
+                     android:src="@drawable/bls"
+                     android:layout_marginTop="12dp"
+                     />
+
+
+                 <TextView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:text="About Us"
+                     android:textSize="20sp"
+                     android:textColor="@color/brown"
+                     android:layout_marginTop="20dp"
+                     />
+
+
+
+
+
+
+             </LinearLayout>
+             </androidx.cardview.widget.CardView>
+
+
+
+         <androidx.cardview.widget.CardView
+             android:layout_width="170dp"
+             android:layout_height="170dp"
+             app:cardCornerRadius="12dp"
+             app:cardElevation="5dp"
+             app:cardBackgroundColor="@color/gray"
+             android:layout_margin="10dp">
+
+
+             <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+                 android:orientation="vertical"
+                 android:gravity="center"
+                 >
+
+                 <ImageView
+                     android:layout_width="24dp"
+                     android:layout_height="24dp"
+                     android:src="@drawable/map"
+                     android:layout_marginTop="12dp"
+                     />
+
+
+                 <TextView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:text="Map"
+                     android:textSize="20sp"
+                     android:textColor="@color/brown"
+                     android:layout_marginTop="20dp"
+                     />
+
+
+
+
+
+
+             </LinearLayout>
+         </androidx.cardview.widget.CardView> <androidx.cardview.widget.CardView
+         android:layout_width="170dp"
+         android:layout_height="170dp"
+         app:cardCornerRadius="12dp"
+         app:cardElevation="5dp"
+         app:cardBackgroundColor="@color/gray"
+         android:layout_margin="10dp">
+
+
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:orientation="vertical"
+             android:gravity="center"
+             >
+
+             <ImageView
+                 android:layout_width="24dp"
+                 android:layout_height="24dp"
+                 android:src="@drawable/bls"
+                 android:layout_marginTop="12dp"
+                 />
+
+
+             <TextView
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="About Us"
+                 android:textSize="20sp"
+                 android:textColor="@color/brown"
+                 android:layout_marginTop="20dp"
+                 />
+
+
+
+
+
+
+         </LinearLayout>
+     </androidx.cardview.widget.CardView> <androidx.cardview.widget.CardView
+         android:layout_width="170dp"
+         android:layout_height="170dp"
+         app:cardCornerRadius="12dp"
+         app:cardElevation="5dp"
+         app:cardBackgroundColor="@color/gray"
+         android:layout_margin="10dp">
+
+
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:orientation="vertical"
+             android:gravity="center"
+             >
+
+             <ImageView
+                 android:layout_width="24dp"
+                 android:layout_height="24dp"
+                 android:src="@drawable/bls"
+                 android:layout_marginTop="12dp"
+                 />
+
+
+             <TextView
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="About Us"
+                 android:textSize="20sp"
+                 android:textColor="@color/brown"
+                 android:layout_marginTop="20dp"
+                 />
+
+
+
+
+
+
+         </LinearLayout>
+     </androidx.cardview.widget.CardView> <androidx.cardview.widget.CardView
+         android:layout_width="170dp"
+         android:layout_height="170dp"
+         app:cardCornerRadius="12dp"
+         app:cardElevation="5dp"
+         app:cardBackgroundColor="@color/gray"
+         android:layout_margin="10dp">
+
+
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:orientation="vertical"
+             android:gravity="center"
+             >
+
+             <ImageView
+                 android:layout_width="24dp"
+                 android:layout_height="24dp"
+                 android:src="@drawable/bls"
+                 android:layout_marginTop="12dp"
+                 />
+
+
+             <TextView
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="About Us"
+                 android:textSize="20sp"
+                 android:textColor="@color/brown"
+                 android:layout_marginTop="20dp"
+                 />
+
+
+
+
+
+
+         </LinearLayout>
+     </androidx.cardview.widget.CardView> <androidx.cardview.widget.CardView
+         android:layout_width="170dp"
+         android:layout_height="170dp"
+         app:cardCornerRadius="12dp"
+         app:cardElevation="5dp"
+         app:cardBackgroundColor="@color/gray"
+         android:layout_margin="10dp">
+
+
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:orientation="vertical"
+             android:gravity="center"
+             >
+
+             <ImageView
+                 android:layout_width="24dp"
+                 android:layout_height="24dp"
+                 android:src="@drawable/bls"
+                 android:layout_marginTop="12dp"
+                 />
+
+
+             <TextView
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="About Us"
+                 android:textSize="20sp"
+                 android:textColor="@color/brown"
+                 android:layout_marginTop="20dp"
+                 />
+
+
+
+
+
+
+         </LinearLayout>
+     </androidx.cardview.widget.CardView>
+
+     </GridLayout>
+ </LinearLayout>
 
 
 </ScrollView>
