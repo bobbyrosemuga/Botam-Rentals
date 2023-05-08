@@ -1,180 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/black"
     tools:context=".DashboardActivity">
- <LinearLayout
-     android:layout_width="match_parent"
-     android:layout_height="match_parent"
-     android:orientation="vertical">
-
-     <TextView
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         android:text="  My  Dashboard "
-         android:textSize="24sp"
-         android:textColor="@color/white"
-         android:textStyle="italic"
-         android:layout_margin="20dp"
-         />
 
 
-     <GridLayout
-         android:layout_width="369dp"
-         android:layout_height="426dp"
-         android:layout_gravity="center_horizontal"
-         android:layout_margin="15dp"
-         android:layout_marginTop="50dp"
-         android:layout_marginBottom="50dp"
-         android:alignmentMode="alignMargins"
-         android:columnCount="2"
-         android:columnOrderPreserved="false"
-         android:rowCount="2">
+    <ImageButton
+        android:id="@+id/About_Us"
+        android:layout_width="152dp"
+        android:layout_height="159dp"
+        android:contentDescription="about_us"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.849"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.594"
+        app:srcCompat="@drawable/abouts" />
 
+    <TextView
+        android:id="@+id/dash"
+        android:layout_width="177dp"
+        android:layout_height="51dp"
+        android:fontFamily="@font/aladin"
+        android:text="@string/my_dashboard"
+        android:textColor="@color/brown"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.067" />
 
-         <androidx.cardview.widget.CardView
-             android:layout_width="150dp"
-             android:layout_height="150dp"
-             android:layout_margin="15dp"
-             app:cardBackgroundColor="@color/white"
-             app:cardCornerRadius="12dp"
-             app:cardElevation="5dp">
+    <ImageButton
+        android:id="@+id/book"
+        android:layout_width="145dp"
+        android:layout_height="154dp"
+        android:contentDescription="Booking Cars"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.827"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.24"
+        app:srcCompat="@drawable/bookwith" />
 
+    <ImageButton
+        android:id="@+id/Contact_Us"
+        android:layout_width="151dp"
+        android:layout_height="154dp"
+        android:contentDescription="Contact Us"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.138"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.597"
+        app:srcCompat="@drawable/uswith"
+        tools:ignore="ImageContrastCheck" />
 
-             <LinearLayout
-                 android:layout_width="match_parent"
-                 android:layout_height="match_parent"
-                 android:layout_margin="15dp"
-                 android:gravity="center"
-                 android:orientation="vertical">
+    <ImageButton
+        android:id="@+id/viewcar"
+        android:layout_width="147dp"
+        android:layout_height="160dp"
+        android:contentDescription="Car Viewing"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.136"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.232"
+        app:srcCompat="@drawable/viewcars" />
 
-                 <ImageView
-                     android:layout_width="24dp"
-                     android:layout_height="24dp"
-                     android:layout_marginTop="12dp"
-                     android:src="@drawable/bls" />
-
-
-                 <TextView
-                     android:layout_width="wrap_content"
-                     android:layout_height="wrap_content"
-                     android:layout_marginTop="20dp"
-                     android:text="About Us"
-                     android:textColor="@color/brown"
-                     android:textSize="20sp" />
-
-
-             </LinearLayout>
-         </androidx.cardview.widget.CardView>
-
-
-         <androidx.cardview.widget.CardView
-             android:layout_width="150dp"
-             android:layout_height="150dp"
-             android:layout_margin="15dp"
-             app:cardBackgroundColor="@color/white"
-             app:cardCornerRadius="12dp"
-             app:cardElevation="5dp">
-
-
-             <LinearLayout
-                 android:layout_width="match_parent"
-                 android:layout_height="match_parent"
-                 android:gravity="center"
-                 android:orientation="vertical">
-
-                 <ImageView
-                     android:layout_width="30dp"
-                     android:layout_height="30dp"
-                     android:layout_marginTop="12dp"
-                     android:src="@drawable/book" />
-
-
-                 <TextView
-                     android:layout_width="wrap_content"
-                     android:layout_height="wrap_content"
-                     android:layout_marginTop="20dp"
-                     android:text="Book"
-                     android:textColor="@color/brown"
-                     android:textSize="20sp" />
-
-
-             </LinearLayout>
-         </androidx.cardview.widget.CardView>
-
-         <androidx.cardview.widget.CardView
-             android:layout_width="150dp"
-             android:layout_height="150dp"
-             android:layout_margin="15dp"
-             app:cardBackgroundColor="@color/white"
-             app:cardCornerRadius="12dp"
-             app:cardElevation="5dp">
-
-
-             <LinearLayout
-                 android:layout_width="match_parent"
-                 android:layout_height="match_parent"
-                 android:gravity="center"
-                 android:orientation="vertical">
-
-                 <ImageView
-                     android:layout_width="30dp"
-                     android:layout_height="35dp"
-                     android:layout_marginTop="12dp"
-                     android:src="@drawable/cars" />
-
-
-                 <TextView
-                     android:layout_width="wrap_content"
-                     android:layout_height="wrap_content"
-                     android:layout_marginTop="20dp"
-                     android:text="View Cars"
-                     android:textColor="@color/brown"
-                     android:textSize="20sp" />
-
-
-             </LinearLayout>
-         </androidx.cardview.widget.CardView>
-
-         <androidx.cardview.widget.CardView
-             android:layout_width="150dp"
-             android:layout_height="150dp"
-             android:layout_margin="15dp"
-             app:cardBackgroundColor="@color/white"
-             app:cardCornerRadius="12dp"
-             app:cardElevation="5dp">
-
-
-             <LinearLayout
-                 android:layout_width="match_parent"
-                 android:layout_height="match_parent"
-                 android:gravity="center"
-                 android:orientation="vertical">
-
-                 <ImageView
-                     android:layout_width="24dp"
-                     android:layout_height="24dp"
-                     android:layout_marginTop="12dp"
-                     android:src="@drawable/contact" />
-
-
-                 <TextView
-                     android:layout_width="wrap_content"
-                     android:layout_height="wrap_content"
-                     android:layout_marginTop="20dp"
-                     android:text="Contact Us"
-                     android:textColor="@color/brown"
-                     android:textSize="20sp" />
-
-
-             </LinearLayout>
-         </androidx.cardview.widget.CardView>
-
-     </GridLayout>
- </LinearLayout>
-
-
-</ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

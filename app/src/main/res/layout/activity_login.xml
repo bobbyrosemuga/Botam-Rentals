@@ -52,14 +52,14 @@
         app:layout_constraintBottom_toTopOf="@+id/edtPass"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        tools:ignore="TextSizeCheck" />
 
     <Button
         android:id="@+id/threebtn"
         android:layout_width="241dp"
         android:layout_height="0dp"
         android:layout_marginBottom="57dp"
-
         android:backgroundTint="#192209"
         android:fontFamily="monospace"
         android:text="CONTINUE"
