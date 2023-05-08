@@ -27,22 +27,22 @@ class DashboardActivity : AppCompatActivity() {
         imagebtnfour = findViewById(R.id.About_Us)
         // SetOnClick listeners
         imagebtnone.setOnClickListener {
-            var tembea = Intent(this,CarShow::class.java)
-            startActivity(tembea)
+            var gari = Intent(this,CarShow::class.java)
+            startActivity(gari)
         }
 
 
         imagebtntwo.setOnClickListener {
-            var tembea = Intent(this,Booking::class.java)
-            startActivity(tembea)
+            var nafasi = Intent(this,Booking::class.java)
+            startActivity(nafasi)
         }
         imagebtnthree.setOnClickListener {
-            var tembea = Intent(this,DashboardActivity::class.java)
-            startActivity(tembea)
+            var mawasiliano = Intent(this,Contact_Us::class.java)
+            startActivity(mawasiliano)
         }
         imagebtnfour.setOnClickListener {
-            var tembea = Intent(this,DashboardActivity::class.java)
-            startActivity(tembea)
+            var kuhusu = Intent(this,About_Us::class.java)
+            startActivity(kuhusu)
         }
     }
 }

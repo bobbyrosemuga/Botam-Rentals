@@ -85,8 +85,8 @@ class MainActivity : AppCompatActivity() {
 
         }
         btnlogin.setOnClickListener {
-            var tembea = Intent(this,LoginActivity::class.java)
-            startActivity(tembea)
+            var ingia = Intent(this,LoginActivity::class.java)
+            startActivity(ingia)
         }
 
     }
