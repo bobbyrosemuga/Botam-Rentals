@@ -71,8 +71,7 @@ class LoginActivity : AppCompatActivity() {
             }
 
         }
-        var tembea = Intent(this,DashboardActivity::class.java)
-        startActivity(tembea)
+
     }
     fun message(title:String, message:String){
         val alertDialog = AlertDialog.Builder(this)
