@@ -5,7 +5,9 @@ import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import com.example.myappbotam.databinding.ActivityAddcarsBinding
+import com.google.firebase.storage.CancellableTask
 import com.google.firebase.storage.FirebaseStorage
 import java.net.URI
 import java.text.SimpleDateFormat
@@ -39,9 +41,19 @@ class AddcarsActivity : AppCompatActivity() {
         val formatter = SimpleDateFormat("yyyy_MM_dd_HH_mm_ss", Locale.getDefault())
         val now = Date()
         val fileName = formatter.format(now)
-        val storageReference = FirebaseStorage.getInstance().
+        val storageReference = FirebaseStorage.getInstance().getReference("images/$fileName")
+
+        storageReference.putFile(ImageUri).
+       addOnSuccessListener {
+           binding.firebaseImage.setImageURI(null)
+           Toast.makeText(this@AddcarsActivity,"Successfully,Uploaded .... ",Toast.LENGTH_SHORT).show()
+           if (progressDialog.isShowing)progressDialog.dismiss()
+       }.addOnFailureListener {
+           if (progressDialog.isShowing)progressDialog.dismiss()
+            Toast.makeText(this@AddcarsActivity,"Failed... ",Toast.LENGTH_SHORT).show()
 
 
+        }
 
     }
 
@@ -59,7 +71,15 @@ class AddcarsActivity : AppCompatActivity() {
         super.onActivityResult(requestCode, resultCode, data)
         if (requestCode == 100 && resultCode == RESULT_OK){
             ImageUri = data?.data!!
-            binding.firebaseImage.setImageURI(ImageUri)
+            binding.firebaseImage.setImageURI(ImageUri);
+
+
+
+
         }
     }
 }
+
+
+
+
