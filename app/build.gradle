@@ -51,6 +51,8 @@ dependencies {
     implementation 'com.google.firebase:firebase-analytics-ktx'
     implementation 'com.google.firebase:firebase-database-ktx:20.2.0'
     implementation 'com.google.firebase:firebase-auth:21.3.0'
+    implementation 'androidx.recyclerview.widget.recyclerview:1.1.0'
+    implementation 'androidx.cardview:cardview:1.0.0'
 
 
 
