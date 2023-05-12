@@ -17,6 +17,11 @@ android {
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
+buildFeatures{
+
+    viewBinding = true
+}
+
 
     buildTypes {
         release {
@@ -25,9 +30,6 @@ android {
         }
     }
 
-    buildFeatures{
-        viewBinding true
-    }
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
@@ -51,6 +53,11 @@ dependencies {
     implementation 'com.google.firebase:firebase-analytics-ktx'
     implementation 'com.google.firebase:firebase-database-ktx:20.2.0'
     implementation 'com.google.firebase:firebase-auth:21.3.0'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+    implementation 'androidx.cardview:cardview:1.0.0'
+
+
+
 
 
 
