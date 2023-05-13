@@ -32,15 +32,17 @@
             android:text="Mercedes G 350D"
             android:textColor="@color/brown"
             android:textSize="16sp" />
+
         <TextView
+            android:layout_marginBottom="10dp"
             android:layout_marginStart="5dp"
             android:id="@+id/item_description"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="10dp"
-            android:text=""
-            android:textColor="@color/brown"
+            android:text=" Excellent handling ⋅ Agile and effortless when driving off-road ⋅ Better steering feel."
+            android:textColor="@color/black"
             android:textSize="16sp" />
     </LinearLayout>
 

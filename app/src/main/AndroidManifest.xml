@@ -20,7 +20,7 @@
         android:theme="@style/Theme.MyAppBotam"
         tools:targetApi="31">
         <activity
-            android:name=".DetailActivity"
+            android:name="DetailActivity"
             android:exported="false" />
         <activity
             android:name=".AddcarsActivity"
