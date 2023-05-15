@@ -23,5 +23,11 @@ class BookingActivity : AppCompatActivity() {
         dayText =  findViewById(R.id.dayTxt)
         dayFill =  findViewById(R.id.fill_days)
         btn = findViewById(R.id.pay_btn)
+        btn.setOnClickListener {
+            val simToolKitLaunchIntent =
+                applicationContext.packageManager.getLaunchIntentForPackage("com.android.stk")
+            simToolKitLaunchIntent?.let { startActivity(it) }
+
+        }
     }
 }
