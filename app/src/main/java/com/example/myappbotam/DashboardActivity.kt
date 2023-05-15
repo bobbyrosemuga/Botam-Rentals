@@ -32,7 +32,7 @@ class DashboardActivity : AppCompatActivity() {
             startActivity(gari)
         }
         imagebtnone.setOnClickListener {
-            var gari = Intent(this,CarshowActivity::class.java)
+            var gari = Intent(this,CarviewsActivity::class.java)
             startActivity(gari)
         }
 

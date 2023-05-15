@@ -100,7 +100,7 @@ class MainActivity : AppCompatActivity() {
     fun clear(){
         mName.setText("")
         mEmail.setText("")
-        mEmail.setText("")
+
     }
 
 }
