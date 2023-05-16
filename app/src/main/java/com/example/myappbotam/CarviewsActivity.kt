@@ -22,6 +22,7 @@ class CarviewsActivity : AppCompatActivity() {
 
         supplyList = ArrayList()
 
+
         supplyList.add(ShowCars(R.drawable.merc,"Mercedes G 350D"," Excellent handling ⋅ Agile and effortless when driving off-road ⋅ Better steering feel ⋅ "))
         supplyList.add(ShowCars(R.drawable.audir8,"Audi R8","This motorsport-inspired technology combined with rear-wheel drive allows for 7 levels of traction adjustability."))
         supplyList.add(ShowCars(R.drawable.porshe,"Porsche Cayenne","3 Petrol Engine on offer. The Petrol engine is 2995 cc and 3998 cc and 3996 cc . It is available with Automatic transmission. Depending upon the variant and fuel type the Cayenne has a mileage of 12.5 kmpl & Ground clearance of Cayenne is 190mm."))

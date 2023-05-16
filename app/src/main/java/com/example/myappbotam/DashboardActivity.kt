@@ -40,6 +40,7 @@ class DashboardActivity : AppCompatActivity() {
         imagebtntwo.setOnClickListener {
             var nafasi = Intent(this,BookingActivity::class.java)
             startActivity(nafasi)
+
         }
         imagebtnthree.setOnClickListener {
             var mawasiliano = Intent(this,ContactActivity::class.java)
